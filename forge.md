@@ -6,7 +6,7 @@ description: How to set up Forge
 
 [Forge](https://github.com/tnelson/Forge/tree/dev) is a tool and language heavily-based on [Alloy](https://alloytools.org/), whose development is led by Tim Nelson at Brown Univesity.
 
-Forge will be our prefered method of studying Alloy, since it offers more features to our intended usage. It is possible however to also use the [Alloy Analyzer]({{ site.baseurl }}{% link arroy-analyzer.md %}). It is available as a jar file.
+Forge will be our prefered method of studying Alloy, since it offers more features to our intended usage. It is possible however to also use the [Alloy Analyzer]({{ site.baseurl }}{% link alloy-analyzer.md %}). It is available as a jar file.
 
 # Install Forge
 

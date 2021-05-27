@@ -3,5 +3,5 @@ layout: page
 title: Alloy Introduction
 ---
 
-# SML Introduction
+# Alloy Introduction
 {: .no_toc .mb-2 }

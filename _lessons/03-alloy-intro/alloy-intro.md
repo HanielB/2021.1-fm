@@ -13,7 +13,7 @@ title: Alloy Introduction
 
 - [Recorded lectures](https://youtube.com/playlist?list=PLeIbBi3CwMZxRUSUJbwyeerfCptuP19Br)
 - [Class notes on set theory recap]({{ site.baseurl }}{% link _lessons/02-set-theory-recap/slides.pdf %})
-- [Class notes on an introduction to Alloy]({{ site.baseurl }}{% link _lessons/03-alloy-intro/03-intro-to-alloy.pdf %})
+- Class notes on an introduction to Alloy [[part 1]({{ site.baseurl }}{% link _lessons/03-alloy-intro/alloy-intro-1.pdf %}), [part 2]({{ site.baseurl }}{% link _lessons/03-alloy-intro/alloy-intro-2.pdf %})]
 
 ### Recommended readings
 

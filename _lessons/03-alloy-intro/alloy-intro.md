@@ -24,4 +24,4 @@ title: Alloy Introduction
 - Alloy Analyzer tutorial, notes by Greg Dennis and Rob Seater [[part 1]({{ site.baseurl }}{% link _lessons/03-alloy-intro/alloy-tutorial-1.pdf %}), [part 2]({{ site.baseurl }}{% link _lessons/03-alloy-intro/alloy-tutorial-2.pdf %})]
 - [A hands-on introduction to Alloy](https://blackmesatech.com/2013/07/alloy/), by Michael Sperberg-McQueen
 
-- Papers on automatic generation of security exploits with Alloy, by Caroline Trippel [[paper 1]({{ site.baseurl }}{% link _lessons/03-alloy-intro/trippel2018-checkmate.pdf %}), [paper 2]({{ site.baseurl }}{% link _lessons/03-alloy-intro/trippel2018.pdf %})]
+- Automatic generation of security exploits with Alloy, by Caroline Trippel [[paper 1]({{ site.baseurl }}{% link _lessons/03-alloy-intro/trippel2018-checkmate.pdf %}), [paper 2]({{ site.baseurl }}{% link _lessons/03-alloy-intro/trippel2018.pdf %})]

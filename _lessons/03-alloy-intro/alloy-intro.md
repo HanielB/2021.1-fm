@@ -43,3 +43,7 @@ title: Alloy Introduction
   - Expressing constraints on relations using Alloy formulas.
 
 - Functions and predicates.
+
+## Resources
+
+- A simple family model for the Alloy Analyzer: [family-1.als]({{ site.baseurl }}{% link _lessons/03-alloy-intro/code/family-1.als %})

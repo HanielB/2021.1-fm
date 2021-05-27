@@ -25,3 +25,21 @@ title: Alloy Introduction
 - [A hands-on introduction to Alloy](https://blackmesatech.com/2013/07/alloy/), by Michael Sperberg-McQueen
 
 - Automatic generation of security exploits with Alloy, by Caroline Trippel [[paper 1]({{ site.baseurl }}{% link _lessons/03-alloy-intro/trippel2018-checkmate.pdf %}), [paper 2]({{ site.baseurl }}{% link _lessons/03-alloy-intro/trippel2018.pdf %})]
+
+## Topics covered
+
+- Set theory recap
+
+- Modeling general software systems.
+  - Introduction to the Alloy modeling language.
+  - Alloy's foundadions.
+  - Signatures, fields, and multiplicity constrainst.
+
+- Modeling simple domains in Alloy.
+  - Generating and analyzing model instances.
+
+- Relations and operations on them.
+  - Formulas, Boolean operators and quantifiers.
+  - Expressing constraints on relations using Alloy formulas.
+
+- Functions and predicates.

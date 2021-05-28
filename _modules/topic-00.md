@@ -5,7 +5,7 @@ title: Topic 00 - Course introduction and overview
 ## {{ page.title }}
 {: .text-gamma }
 
-18 Aug
+18 May
 : **Course introduction**
   : Who am I,
   : [ERE]({{ site.baseurl }}{% link ere.md %}),
@@ -14,7 +14,7 @@ title: Topic 00 - Course introduction and overview
   : [Slides]({{ site.baseurl }}{% link _lessons/00-course_intro/00-course-intro.pdf %}),
   : [Lecture](https://youtu.be/rrcR4A_SB8Q)
 
-20 Aug
+20 May
 : **From tests and properties to specification**
   : [Board]({{ site.baseurl }}{% link _lessons/01-motivation/board.png %}),
   : [Lecture](https://youtu.be/BsUV6C6YZMM)

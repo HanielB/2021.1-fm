@@ -48,5 +48,5 @@ title: Alloy Introduction
 
 - A simple family model for the Alloy Analyzer: [family-1.als]({{ site.baseurl }}{% link _lessons/03-alloy-intro/code/family-1.als %})
 - A simple family model *with facts* for the Alloy Analyzer: [family-2.als]({{ site.baseurl }}{% link _lessons/03-alloy-intro/code/family-2.als %})
-- A simple family model with facts *and different run configurations* for the Alloy Analyzer: [family-2.als]({{ site.baseurl }}{% link _lessons/03-alloy-intro/code/family-3.als %})
-- A simple family model with facts, different run configurations *and assertions* for the Alloy Analyzer: [family-2.als]({{ site.baseurl }}{% link _lessons/03-alloy-intro/code/family-4.als %})
+- A simple family model with facts *and different run configurations* for the Alloy Analyzer: [family-3.als]({{ site.baseurl }}{% link _lessons/03-alloy-intro/code/family-3.als %})
+- A simple family model with facts, different run configurations *and assertions* for the Alloy Analyzer: [family-4.als]({{ site.baseurl }}{% link _lessons/03-alloy-intro/code/family-4.als %})

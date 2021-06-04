@@ -16,3 +16,7 @@ title: Topic 01 - Introduction to Alloy
 27 May
 : [**Introduction to Alloy**]({{ site.baseurl }}{% link _lessons/03-alloy-intro/alloy-intro.md %})
   : [Lecture](https://youtu.be/7SJPDnZ40Hg)
+
+01 Jun
+: [**Introduction to Alloy**]({{ site.baseurl }}{% link _lessons/03-alloy-intro/alloy-intro.md %})
+  : [Lecture](https://youtu.be/6Mc5VzPA7h0)

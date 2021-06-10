@@ -24,3 +24,7 @@ title: Topic 01 - Introduction to Alloy
 08 Jun
 : **Introduction to Forge**
   : [Lecture](https://youtu.be/k2vGQ9OEDsQ)
+
+10 Jun
+: **More Alloy Modelling**
+  : [Lecture](https://youtu.be/-gZ5lM8SHJ4)

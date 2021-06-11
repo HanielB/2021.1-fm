@@ -26,5 +26,5 @@ title: Topic 01 - Introduction to Alloy
   : [Lecture](https://youtu.be/k2vGQ9OEDsQ)
 
 10 Jun
-: **More Alloy Modelling**
+: [**More Alloy Modelling**]({{ site.baseurl }}{% link _lessons/05-academy/more-alloy.md %})
   : [Lecture](https://youtu.be/-gZ5lM8SHJ4)

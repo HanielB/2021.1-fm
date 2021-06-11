@@ -9,10 +9,6 @@ title: Introduction to Forge
 - TOC
 {:toc}
 
-## Readings
-
-- Class notes on an modelling an [Academia setting in Alloy]({{ site.baseurl }}{% link _lessons/05-academy/academia-model.pdf %})
-
 ## Topics covered
 
 - What is Forge. Why Forge.

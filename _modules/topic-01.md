@@ -22,7 +22,7 @@ title: Topic 01 - Introduction to Alloy
   : [Lecture](https://youtu.be/6Mc5VzPA7h0)
 
 08 Jun
-: **Introduction to Forge**
+: [**Introduction to Forge**]({{ site.baseurl }}{% link _lessons/04-forge-intro/forge-intro.md %})
   : [Lecture](https://youtu.be/k2vGQ9OEDsQ)
 
 10 Jun

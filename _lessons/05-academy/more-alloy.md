@@ -15,4 +15,4 @@ title: More Alloy Modelling
 
 ## Resources
 
-- Academy models for the Alloy Analyzer: [academy-1.als]({{ site.baseurl }}{% link _lessons/05-academy/code/academy-1.als %}), [academy-2.als]({{ site.baseurl }}{% link _lessons/05-academy/code/academy-2.als %}), [academy-3.als]({{ site.baseurl }}{% link _lessons/05-academy/code/academy-3.als %}),
+- Academy models for the Alloy Analyzer: [academia-1.als]({{ site.baseurl }}{% link _lessons/05-academy/code/academia-1.als %}), [academia-2.als]({{ site.baseurl }}{% link _lessons/05-academy/code/academia-2.als %}), [academia-3.als]({{ site.baseurl }}{% link _lessons/05-academy/code/academia-3.als %}),

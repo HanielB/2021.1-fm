@@ -36,12 +36,20 @@ different properties of state machines:
   relation) from every other state
 
 - a machine with a deadlock: a machine with a state that is reachable from an
-  initial state, but has no successors
+  initial state, but has no successors. For example,
+
+  ![State0 is deadlocked]({{ site.baseurl }}{% link _lessons/06-dynamic/deadlock.png %})
+
+  shows a state machine with `State0` deadlocked.
 
 - a machine with a livelock: a machine where there exists some cycle reachable
   from an initial state and a state (the “livelocked” state) reachable from the
   cycle that’s not part of the cycle. Note that this livelocked state cannot be
-  reached at any point before reaching the cycle or in the cycle itself.
+  reached at any point before reaching the cycle or in the cycle itself. For example,
+
+  ![State3 is livelocked by the cycle]({{ site.baseurl }}{% link _lessons/06-dynamic/livelock.png %})
+
+  shows a state machine with `State3` livelocked by the cycle starting in `State0`.
 
 ### Code
 

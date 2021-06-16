@@ -55,7 +55,7 @@ different properties of state machines:
 We can make the family model dynamic by associating relation with states. Let's
 cosider a subset of the family model:
 
-```
+```alloy
 abstract sig Person {
   spouse: lone Person,
 }
@@ -67,8 +67,7 @@ If we were to make the spouse relation to also consider states, we could
 simulate that in one state people are married and another they are not. So the
 above model would include `State` and have a different `spouse` relation:
 
-```
-
+```alloy
 sig State {
     successor : set State
 }
@@ -85,7 +84,7 @@ and `q` are married if `(p+q).spouse.s` is non-empty. With this condition we can
 define an operation that simulates a *transition*, i.e., a change of states from
 "these people are not married" to "these people are married":
 
-```
+```alloy
 pred getMarried [p,q: Person, s,s': State] {
   -- Pre-condition: they must not be married
   no (p+q).spouse.s

@@ -59,7 +59,6 @@ cosider a subset of the family model:
 abstract sig Person {
   spouse: lone Person,
 }
-
 sig Man, Woman extends Person {}
 ```
 
@@ -71,11 +70,9 @@ above model would include `State` and have a different `spouse` relation:
 sig State {
     successor : set State
 }
-
 abstract sig Person {
   spouse: Person lone -> State,
 }
-
 sig Man, Woman extends Person {}
 ```
 
@@ -94,8 +91,8 @@ pred getMarried [p,q: Person, s,s': State] {
 }
 ```
 
-The above (together with an example run command) can be found [here]({{ site.baseurl }}{% link _lessons/06-dynamic/code/family-state.als %}).
+The above (together with an example `run` command) can be found [here]({{ site.baseurl }}{% link _lessons/06-dynamic/code/family-state.als %}).
 
 ## Acknowledgments
 
-Thanks to Tim Nelson for sharing examples about the state machine model. Thanks for Cesare Tinelli for the family model material, itself based on the original Alloy model by Daniel Jackson.
+Thanks to Tim Nelson for sharing examples about the state machine model. Thanks to Cesare Tinelli for the family model material, itself based on the original Alloy model by Daniel Jackson distributed with the Alloy Analyzer.

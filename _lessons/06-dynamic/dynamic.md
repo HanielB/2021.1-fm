@@ -21,28 +21,28 @@ different properties of state machines:
 
 - there is at least one initial state
 
-- a deterministic machine, in which there is one initial state and each state
+- a *deterministic* machine, in which there is one initial state and each state
   has at most one successor
 
-- a nondeterministic machine, in which there are multiple initial states, or
+- a *nondeterministic* machine, in which there are multiple initial states, or
   where at least one state has more than one successor, or both
 
-- a machine with at least one state that is unreachable from any initial state
+- a machine with at least one state that is *unreachable* from any initial state
 
-- a machine where all states are reachable from some initial state (it need not
+- a machine where all states are *reachable* from some initial state (it need not
   be the same initial state for each one)
 
-- a connected machine in which every state is reachable (along the successor
+- a *connected* machine in which every state is reachable (along the successor
   relation) from every other state
 
-- a machine with a deadlock: a machine with a state that is reachable from an
+- a machine with a *deadlock*: a machine with a state that is reachable from an
   initial state, but has no successors. For example,
 
   ![State0 is deadlocked]({{ site.baseurl }}{% link _lessons/06-dynamic/deadlock.png %})
 
   shows a state machine with `State0` deadlocked.
 
-- a machine with a livelock: a machine where there exists some cycle reachable
+- a machine with a *livelock*: a machine where there exists some cycle reachable
   from an initial state and a state (the “livelocked” state) reachable from the
   cycle that’s not part of the cycle. Note that this livelocked state cannot be
   reached at any point before reaching the cycle or in the cycle itself. For example,

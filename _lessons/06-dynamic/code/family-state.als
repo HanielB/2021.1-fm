@@ -20,3 +20,5 @@ pred getMarried [p,q: Person, s,s': State] {
 }
 
 run {some p,q : Person | some s,s' : State | getMarried[p,q,s,s'] }
+
+-- run {some p,q : Person | some s,s' : State | getMarried[p,q,s,s'] and no s : State | s in s.successor} for exactly 2 Person, 2 State

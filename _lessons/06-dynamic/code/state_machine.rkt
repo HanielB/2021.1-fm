@@ -53,4 +53,4 @@ pred livelock {
     }
 }
 
-run {deadlock}
+run {livelock}

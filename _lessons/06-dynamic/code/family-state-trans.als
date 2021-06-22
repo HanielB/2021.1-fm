@@ -1,39 +1,48 @@
 
 sig State {
-    successor : set State
+    successor : set State,
+    prev : set State
 }
 
 one sig Initial extends State {}
 
 abstract sig Person {
   spouse: Person lone -> State,
+  -- new
+  children: set Person -> State,
+  parents: Person set -> State,
+  siblings: Person set -> State,
+  alive: set State
 }
 
 sig Man, Woman extends Person {}
 
+------------------ Linear order on State ------------
 
------- guaranteeing that successor is a total order on states
-
-pred linearOrder {
-  -- initial state is the start
-  no s : State | Initial in s.successor
-
-  -- irreflexive
-  all s : State | s not in s.successor
-
-  -- transitive
-  all s1, s2 : State | s2 in s1.successor implies s1 in s2.successor
-
-  -- antisymmetric
-  all s1, s2 : State | (s2 in s1.successor and s1 in s2.successor) implies s1 = s2
+fact linearOrder {
+    -- no cycles, each state has at most one successor
+    all s: State {
+        lone s.successor
+        s not in s.^successor
+    }
+    -- there is one final state
+    one s: State | no s.successor
+    -- there is one initial state, which is Initial
+    one s: State | no successor.s
+    no s : State - Initial | some s.successor & Initial
+    -- no self loops
+    no iden & successor
+    -- prev is symmetric of successor
+    prev = ~successor
 }
 
-fun last: one State { State - (State.successor) }
+fun last: one State { State - (successor.State) }
 
 ------ Getting married now is with the next one
 
 pred getMarried [p,q: Person, s,s': State] {
-  -- Pre-condition : they must not be married
+  -- Pre-condition : they must be alive, must not be married
+  p+q in alive.s
   no (p+q).spouse.s
 
   -- Post-condition : After marriage they are each other's spouses
@@ -46,6 +55,7 @@ pred getMarried [p,q: Person, s,s': State] {
 -- Initial conditions
 pred init [s: State] {
   no spouse.s
+  #alive.s > 1
 }
 
 -- Transition relation
@@ -57,7 +67,7 @@ pred transition [s, s' : State] {
 -- that satisfies the init condition
 pred System {
    init [Initial]
-   all s : State - (State - (State.successor))| transition [s, s.successor]
+   all s : State - last | transition [s, s.successor]
 }
 
-run {linearOrder and System } for exactly 2 Person, 2 State
+run {System } for exactly 2 Person, exactly 2 State

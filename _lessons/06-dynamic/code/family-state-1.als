@@ -1,8 +1,10 @@
 
 sig State {
---    successor : set State
-    successor : one State
+    successor : set State,
+    prev : set State
 }
+
+one sig Initial extends State {}
 
 abstract sig Person {
   spouse: Person lone -> State,
@@ -14,6 +16,26 @@ abstract sig Person {
 }
 
 sig Man, Woman extends Person {}
+
+------------------ Linear order on State ------------
+
+fact linearOrder {
+    -- no cycles, each state has at most one successor
+    all s: State {
+        lone s.successor
+        s not in s.^successor
+    }
+    -- there is one final state
+    one s: State | no s.successor
+    -- there is one initial state, which is Initial
+    one s: State | no successor.s
+    no s : State - Initial | some s.successor & Initial
+    -- no self loops
+    no iden & successor
+    -- prev is symmetric of successor
+    prev = ~successor
+}
+
 
 ------------------ Auxiliary predicates ------------
 
@@ -61,6 +83,10 @@ fact invariants {
   all s: State | all p, q: Person |
     (some p.children.s & q.children.s and p != q) implies
                 not BloodRelatives [p, q, s]
+
+  -- the spouse relation is symmetric
+  all s: State | spouse.t = ~(spouse.t)
+
 }
 
 run {#State > 1 and some p: Person | some p.children}  for 5

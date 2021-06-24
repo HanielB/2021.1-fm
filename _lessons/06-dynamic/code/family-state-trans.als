@@ -11,6 +11,12 @@ abstract sig Person {
 
 sig Man, Woman extends Person {}
 
+fun parents [s : State] : Person -> Person {~(children.s)}
+
+fun siblings [p: Person, s: State]: Person {
+  { q : Person - p | some q.(parents[s]) and p.(parents[s]) = q.(parents[s]) }
+}
+
 ------------------ Linear order on State ------------
 
 fact linearOrder {
@@ -113,9 +119,9 @@ pred dies [p: Person, s,s': State] {
 -- Initial conditions
 pred init [s : State] {
   no spouse.s
-  #alive.s > 1
   no children.s
-  #Person = 2
+  #alive.s > 2
+  #Person = #alive.s
 }
 
 -- Transition relation
@@ -140,4 +146,24 @@ pred marriedAndDivorced {
       s2 in s1.^successor and p !in q.spouse.s2 and q !in p.spouse.s2 and p in q.spouse.s1 and q in p.spouse.s1
 }
 
-run {system and marriedAndDivorced}
+-- run {system and marriedAndDivorced}
+
+-- Only living people can have children
+assert a0 {
+  system => all s: State | all p: Person |
+             (some p.children.s) => p in alive.s
+}
+check a0 for 10 but 6 State
+
+-- Only living people can be married
+assert a1 {
+  system => all s: State | all p: Person |
+             (some p.spouse.s) => p in alive.s
+}
+check a1 for 10 but 6 State
+
+-- No person can be their own ancestor
+assert a2 {
+  system => all s: State | no p: Person | p in p.^(parents[s])
+}
+check a2 for 10 but 6 State

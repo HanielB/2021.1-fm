@@ -172,15 +172,15 @@ assert a0 {
 }
 check a0 for 10 but 6 State
 
--- Only living people can have children
+-- No person can be their own ancestor
 assert a1 {
-  system => all s: State | all p: Person |
-             (some p.children.s) => p in alive.s
+  system => all s: State | no p: Person | p in p.^(parents[s])
 }
 check a1 for 10 but 6 State
 
--- No person can be their own ancestor
+-- Only living people can have children
 assert a2 {
-  system => all s: State | no p: Person | p in p.^(parents[s])
+  system => all s: State | all p: Person |
+             (some p.children.s) => p in alive.s
 }
 check a2 for 10 but 6 State

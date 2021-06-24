@@ -11,7 +11,7 @@ title: Dynamic systems
 
 ## Readings
 
-## A simple state machine and several properties:
+## A simple state machine and several properties
 
 A state machine is a directed graph that models how a system moves from State to
 State as it executes. It has one or more marked Initial (or starting) states,
@@ -58,7 +58,7 @@ different properties of state machines:
 - Forge version:
   - [state_machine.rkt]({{ site.baseurl }}{% link _lessons/06-dynamic/code/state_machine.rkt %})
 
-## Making the family model dynamic:
+## Making the family model dynamic
 
 We can make the family model dynamic by associating relation with states. Let's
 cosider a subset of the family model:
@@ -100,6 +100,106 @@ pred getMarried [p,q: Person, s,s': State] {
 ```
 
 The above (together with an example `run` command) can be found [here]({{ site.baseurl }}{% link _lessons/06-dynamic/code/family-state.als %}).
+
+## Transition system
+
+Relying on an [ordering]({{ site.baseurl }}{% link _lessons/06-dynamic/ordering.md %}) of the states we can proceed to specify transition systems. A transition system is defined in terms of:
+
+- Initial conditions to be satisfied
+- A transition relation than when satisfied changes the system to the next state
+
+Modelling the family model as a transition system defined by the `getMarried` operation, we can define as initial conditions that nobody is married, i.e.
+
+```alloy
+pred init [s : State] {
+  no spouse.s
+}
+```
+
+and as transitien relation a predicate stating that two people get married, i.e.
+
+```alloy
+pred transition [s, s' : State] {
+  some p, q : Person | getMarried[p,q, s, s']
+}
+```
+
+and finally the transition system states that given that the initial conditions are met, at every state but the final a transition happens between a state and its successor:
+
+``` alloy
+pred system {
+  init[first]
+  all s : State - final | transition[s, s.successor]
+}
+```
+
+The above specifies all possible executions of the system from a state that satisfies the init condition.
+
+### Frame conditions
+
+It's necessary to restrict operations to only change the relations they refer to. For example, people getting married should not affect the relations about people having children or about being alive. Doing so is called establishing "frame conditions", i.e. what exactly in the system can be affected by an operation.
+
+Considering that the `Person` signature is now defined as
+
+``` alloy
+abstract sig Person {
+  spouse: Person lone -> State,
+  children: set Person -> State,
+  alive: set State
+}
+```
+
+we establish frame predicates for each of the relations:
+
+``` alloy
+pred noChildrenChangeExcept[ps : set Person, s, s' : State] {
+  all p : Person - ps | p.children.s = p.children.s'
+}
+
+pred noSpouseChangeExcept[ps : set Person, s, s' : State] {
+  all p : Person - ps | p.spouse.s = p.spouse.s'
+}
+
+pred noAliveChange[s, s' : State] {
+  alive.s' = alive.s
+}
+```
+
+and define operations which respect frame conditions:
+
+``` alloy
+pred getMarried [p,q : Person, s, s' : State] {
+  -- pre-condition: not married yet
+  no (p+q).spouse.s
+  -- post-condition: they're married
+  q in p.spouse.s'
+  p in q.spouse.s'
+  -- frame conditions
+  noChildrenChangeExcept[none, s, s']
+  noSpouseChangeExcept[p+q, s, s']
+  noAliveChange[s, s']
+}
+
+pred isBornFromParents [p : Person, m : Man, w : Woman, s, s': State] {
+  -- pre-condition :
+  m+w in alive.s
+  p not in alive.s
+  -- post condition:
+  alive.s' = alive.s + p
+
+  m.children.s' = m.children.s + p
+  w.children.s' = w.children.s + p
+  --frame condition:
+  noChildrenChangeExcept[m+w, s, s']
+  noSpouseChangeExcept[none, s, s']
+}
+```
+
+### Code
+
+- Family model as transition system
+  - [family-state-trans.als]({{ site.baseurl }}{% link _lessons/06-dynamic/code/family-state-trans.als %})
+
 
 ## Acknowledgments
 

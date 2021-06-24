@@ -200,6 +200,8 @@ pred isBornFromParents [p : Person, m : Man, w : Woman, s, s': State] {
 - Family model as transition system
   - [family-state-trans.als]({{ site.baseurl }}{% link _lessons/06-dynamic/code/family-state-trans.als %})
 
+- A complete family model transition system with several invariant checks. Note that the transition system is defined for the `Time` signature, which is guaranteed to be ordered by the `ordering` module of Alloy Analyzer.
+  - [family-complete-dynamic.als]({{ site.baseurl }}{% link _lessons/06-dynamic/code/family-complete-dynamic.als %})
 
 ## Acknowledgments
 

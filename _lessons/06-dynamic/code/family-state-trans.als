@@ -148,17 +148,17 @@ pred marriedAndDivorced {
 
 -- run {system and marriedAndDivorced}
 
--- Only living people can have children
+-- Only living people can be married
 assert a0 {
   system => all s: State | all p: Person |
-             (some p.children.s) => p in alive.s
+             (some p.spouse.s) => p in alive.s
 }
 check a0 for 10 but 6 State
 
--- Only living people can be married
+-- Only living people can have children
 assert a1 {
   system => all s: State | all p: Person |
-             (some p.spouse.s) => p in alive.s
+             (some p.children.s) => p in alive.s
 }
 check a1 for 10 but 6 State
 

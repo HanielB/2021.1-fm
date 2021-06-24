@@ -32,6 +32,12 @@ fact linearOrder {
 fun first : one State { State - State.successor }
 fun final : one State { State - successor.State }
 
+-- Auxiliary
+
+pred BloodRelatives [p: Person, q: Person, s: State, ]  {
+  some a: Person | p+q in a.*(children.s)
+}
+
 -- frame condition predicates
 
 pred noChildrenChangeExcept[ps : set Person, s, s' : State] {
@@ -60,8 +66,10 @@ pred getDivorced [p,q : Person, s, s' : State] {
 }
 
 pred getMarried [p,q : Person, s, s' : State] {
-  -- pre-condition: not married yet
+  -- pre-condition: not married yet, they're alive, not blood relatives
   no (p+q).spouse.s
+  p+q in alive.s
+  not BloodRelatives[p,q,s]
   -- post-condition: they're married
   q in p.spouse.s'
   p in q.spouse.s'
@@ -85,13 +93,29 @@ pred isBornFromParents [p : Person, m : Man, w : Woman, s, s': State] {
   noSpouseChangeExcept[none, s, s']
 }
 
+pred dies [p: Person, s,s': State] {
+  -- Pre-condition
+     p in alive.s
+  -- Post-condition
+     no p.spouse.s'
+
+  -- Post-condition and frame condition
+     alive.s' = alive.s - p
+     all sp: p.spouse.s | sp.spouse.s' = sp.spouse.s - p
+
+  -- Frame condition
+     noChildrenChangeExcept [none, s, s']
+     noSpouseChangeExcept [p + p.spouse.s, s, s']
+}
+
 -- Transition System
 
 -- Initial conditions
 pred init [s : State] {
   no spouse.s
-  no alive.s
+  #alive.s > 1
   no children.s
+  #Person = 2
 }
 
 -- Transition relation
@@ -99,6 +123,10 @@ pred transition [s, s' : State] {
   (some p, q : Person | getMarried[p,q, s, s'])
   or
   (some p, q : Person | getDivorced[p,q,s,s'])
+  or
+  (some p: Person, m: Man, w: Woman | isBornFromParents [p, m, w, s, s'])
+  or
+  (some p : Person | dies[p,s,s'])
 }
 
 -- System: all possible executions of the system from a state that satisfies the init condition

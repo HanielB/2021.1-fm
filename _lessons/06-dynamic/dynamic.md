@@ -9,8 +9,6 @@ title: Dynamic systems
 - TOC
 {:toc}
 
-## Readings
-
 ## A simple state machine and several properties
 
 A state machine is a directed graph that models how a system moves from State to
@@ -205,6 +203,14 @@ pred isBornFromParents [p : Person, m : Man, w : Woman, s, s': State] {
 
 - A complete family model transition system with several invariant checks. Note that the transition system is defined for the `Time` signature, which is guaranteed to be ordered by the `ordering` module of Alloy Analyzer.
   - [family-complete-dynamic.als]({{ site.baseurl }}{% link _lessons/06-dynamic/code/family-complete-dynamic.als %})
+
+## Case studies
+
+- Autonomous Rovers [notes]({{ site.baseurl }}{% link _lessons/06-dynamic/rover-model.pdf %})
+  - [rover.als]({{ site.baseurl }}{% link _lessons/06-dynamic/code/rover.als %})
+- Hotel Lock System [notes]({{ site.baseurl }}{% link _lessons/06-dynamic/hotel-model.pdf %})
+  - [hotel1.als]({{ site.baseurl }}{% link _lessons/06-dynamic/code/hotel1.als %}), [hotel2.als]({{ site.baseurl }}{% link _lessons/06-dynamic/code/hotel2.als %})
+
 
 ## Acknowledgments
 

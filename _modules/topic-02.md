@@ -16,3 +16,9 @@ title: Topic 02 - Dynamic Systems
 22 Jun
 : [**Ordering and Transition Systems**]({{ site.baseurl }}{% link _lessons/06-dynamic/dynamic.md %})
   : [Lecture](https://youtu.be/5vcDPDpTLzQ)
+
+24 Jun
+: [**Transition Systems and Invariants**]({{ site.baseurl }}{% link _lessons/06-dynamic/dynamic.md %})
+  : [Lecture](https://youtu.be/GQfAE6VLae4)
+: Q&A Homework 2
+  : [Lecture](https://youtu.be/IJIIbqjjuHQ)

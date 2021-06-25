@@ -206,9 +206,11 @@ pred isBornFromParents [p : Person, m : Man, w : Woman, s, s': State] {
 
 ## Case studies
 
-- Autonomous Rovers [notes]({{ site.baseurl }}{% link _lessons/06-dynamic/rover-model.pdf %})
+- Autonomous Rovers
+  - [notes]({{ site.baseurl }}{% link _lessons/06-dynamic/rover-model.pdf %})
   - [rover.als]({{ site.baseurl }}{% link _lessons/06-dynamic/code/rover.als %})
-- Hotel Lock System [notes]({{ site.baseurl }}{% link _lessons/06-dynamic/hotel-model.pdf %})
+- Hotel Lock System
+  - [notes]({{ site.baseurl }}{% link _lessons/06-dynamic/hotel-model.pdf %})
   - [hotel1.als]({{ site.baseurl }}{% link _lessons/06-dynamic/code/hotel1.als %}), [hotel2.als]({{ site.baseurl }}{% link _lessons/06-dynamic/code/hotel2.als %})
 
 

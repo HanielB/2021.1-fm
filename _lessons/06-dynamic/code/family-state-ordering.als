@@ -1,7 +1,6 @@
-sig State {
-    successor : set State,
-    prev : set State
-}
+open util/ordering[State] as State
+
+sig State {}
 
 abstract sig Person {
   spouse: Person lone -> State,
@@ -25,27 +24,6 @@ fun parents [s : State] : Person -> Person {~(children.s)}
 fun siblings [p: Person, s: State]: Person {
   { q : Person - p | some q.(parents[s]) and p.(parents[s]) = q.(parents[s]) }
 }
-
------------------- Linear order on State ------------
-
-fact linearOrder {
-    -- no cycles, each state has at most one successor
-    all s: State {
-        lone s.successor
-        s not in s.^successor
-    }
-    -- there is one final state
-    one s: State | no s.successor
-    -- there is one initial state
-    one s: State | no successor.s
-    -- no self loops
-    no iden & successor
-    -- prev is symmetric of successor
-    prev = ~successor
-}
-
-fun first : one State { State - State.successor }
-fun final : one State { State - successor.State }
 
 -- Auxiliary
 
@@ -161,13 +139,13 @@ pred transition [s, s' : State] {
 
 -- System: all possible executions of the system from a state that satisfies the init condition
 pred system {
-  init[first]
-  all s : State - final | transition[s, s.successor]
+  init[State/first]
+  all s : State - State/last | transition[s, State/next[s]]
 }
 
 pred marriedAndDivorced {
   some s1,s2 : State - first | some p,q : Person |
-      s2 in s1.^successor and p !in q.spouse.s2 and q !in p.spouse.s2 and p in q.spouse.s1 and q in p.spouse.s1
+      s2 in State/nexts[s1] and p !in q.spouse.s2 and q !in p.spouse.s2 and p in q.spouse.s1 and q in p.spouse.s1
 }
 
 -- run {system and marriedAndDivorced}

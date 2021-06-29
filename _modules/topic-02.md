@@ -22,3 +22,7 @@ title: Topic 02 - Dynamic Systems
   : [Lecture](https://youtu.be/GQfAE6VLae4)
 : Q&A Homework 2
   : [Lecture](https://youtu.be/IJIIbqjjuHQ)
+
+29 Jun
+: [**More on Transition Systems and Invariants**]({{ site.baseurl }}{% link _lessons/06-dynamic/dynamic.md %})
+  : [Lecture](https://youtu.be/3GEfpFbpJp4)

@@ -139,6 +139,7 @@ pred init [s : State] {
   no children.s
   #alive.s > 2
   #Person = #alive.s
+  no op.s
 }
 
 -- Transition relation

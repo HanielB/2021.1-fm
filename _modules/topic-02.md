@@ -26,3 +26,6 @@ title: Topic 02 - Dynamic Systems
 29 Jun
 : [**More on Transition Systems and Invariants**]({{ site.baseurl }}{% link _lessons/06-dynamic/dynamic.md %})
   : [Lecture](https://youtu.be/3GEfpFbpJp4)
+
+01 Jul
+: Laboratory: Memory Management

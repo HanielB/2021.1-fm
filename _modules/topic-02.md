@@ -31,5 +31,5 @@ title: Topic 02 - Dynamic Systems
 : Laboratory: Memory Management
 
 06 Jul
-: From Alloy to SAT
+: [**From Alloy to SAT**]({{ site.baseurl }}{% link _lessons/07-solving/solving.md %})
   : [Lecture](https://youtu.be/MpfoxTbg8_c)

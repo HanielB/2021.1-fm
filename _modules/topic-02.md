@@ -29,3 +29,7 @@ title: Topic 02 - Dynamic Systems
 
 01 Jul
 : Laboratory: Memory Management
+
+06 Jul
+: From Alloy to SAT
+  : [Lecture](https://youtu.be/MpfoxTbg8_c)

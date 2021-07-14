@@ -31,7 +31,7 @@ title: Topic 02 - Dynamic Systems
 : Laboratory: Memory Management
 
 06 Jul
-: [**From Alloy to SAT**]({{ site.baseurl }}{% link _lessons/07-solving/solving.md %})
+: [**Alloy proof obligations and SAT encodings**]({{ site.baseurl }}{% link _lessons/07-solving/solving.md %})
   : [Lecture](https://youtu.be/MpfoxTbg8_c)
 
 08 Jul

@@ -13,7 +13,7 @@ title: Constraint solving for Alloy
 {: .no_toc .mb-2 }
 
 - Writings on the board:
-  - [Board for the overveiew of leveraging SAT solvers]({{ site.baseurl }}{% link _lessons/07-solving/alloy2sat.png %})
+  - [Board for the overview of leveraging SAT solvers]({{ site.baseurl }}{% link _lessons/07-solving/alloy2sat.png %})
   - [Board for SAT solving]({{ site.baseurl }}{% link _lessons/07-solving/satSolving.png %})
   - [Board for Alloy encoding into SAT]({{ site.baseurl }}{% link _lessons/07-solving/alloy2sat-encoding.png %})
 

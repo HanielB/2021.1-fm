@@ -22,3 +22,6 @@ title: Topic 03 - Constraint solving for Alloy
 15 Jul
 : [**Encoding Alloy into SAT (part 2)**]({{ site.baseurl }}{% link _lessons/07-solving/solving.md %})
   : [Lecture](https://youtu.be/H_9OAU_s8cQ)
+
+20 Jul
+: Laboratory: SAT solving

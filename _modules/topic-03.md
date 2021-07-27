@@ -25,3 +25,6 @@ title: Topic 03 - Constraint solving for Alloy
 
 20 Jul
 : Laboratory: SAT solving
+
+22 Jul
+: No class

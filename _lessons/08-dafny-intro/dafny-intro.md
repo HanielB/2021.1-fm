@@ -26,3 +26,4 @@ title: Dafny Introduction
 - Method contracts in Dafny.
 - Specifying pre and post-conditions.
 - Compositional verification of methods through the use of contracts.
+- Abstraction of while loops by loop invariants.

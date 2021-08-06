@@ -18,5 +18,5 @@ title: Topic 04 - Specifying and verifying programs with Dafny
   : [Lecture](https://youtu.be/BVAUFQHVbjg)
 
 05 Aug
-: **More on Dafny**
-  : Lecture
+: **Arrays, invariants and frame conditions**
+  : [Lecture](https://youtu.be/VSn0b_yhHqg)

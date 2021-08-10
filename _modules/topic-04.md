@@ -20,3 +20,7 @@ title: Topic 04 - Specifying and verifying programs with Dafny
 05 Aug
 : **Arrays, invariants and frame conditions**
   : [Lecture](https://youtu.be/e6VhUqn_aqA)
+
+10 Aug
+: **More on arrays and invariants**
+  : [Lecture](https://youtu.be/JPOR5n4GH2M)

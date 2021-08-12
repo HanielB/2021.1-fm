@@ -14,13 +14,13 @@ title: Topic 04 - Specifying and verifying programs with Dafny
   : [Lecture](https://youtu.be/hjILHtFgI1o)
 
 03 Aug
-: **Symbolic execution and loop invariants**
+: [**Symbolic execution and loop invariants**]({{ site.baseurl }}{% link _lessons/09-dafny-invariants/dafny-invariants.md %})
   : [Lecture](https://youtu.be/BVAUFQHVbjg)
 
 05 Aug
-: **Arrays, invariants and frame conditions**
+: [**Arrays, invariants and frame conditions**]({{ site.baseurl }}{% link _lessons/09-dafny-invariants/dafny-invariants.md %})
   : [Lecture](https://youtu.be/e6VhUqn_aqA)
 
 10 Aug
-: **More on arrays and invariants**
+: [**More on arrays and invariants**]({{ site.baseurl }}{% link _lessons/09-dafny-invariants/dafny-invariants.md %})
   : [Lecture](https://youtu.be/JPOR5n4GH2M)

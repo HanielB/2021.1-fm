@@ -14,6 +14,12 @@ title: Dafny and invariants
 - [Dafny Reference Manual](https://dafny-lang.github.io/dafny/DafnyRef/DafnyRef)
 - [Board for programs as transition systems]({{ site.baseurl }}{% link _lessons/09-dafny-invariants/board.png %})
 
+### Recommended readings
+
+- Lectures notes by Cesare Tinelli:
+  - [Arrays in Dafny (part I)]({{ site.baseurl }}{% link _lessons/09-dafny-invariants/cesare-arrays.pdf %})
+  - [Arrays in Dafny (part II)]({{ site.baseurl }}{% link _lessons/09-dafny-invariants/cesare-arrays-ii.pdf %})
+
 ## Topics
 
 - Termination of while loops and recursive functions in Dafny.

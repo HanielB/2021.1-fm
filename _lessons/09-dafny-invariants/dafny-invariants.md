@@ -100,7 +100,6 @@ method Find(a: array<int>, key: int) returns (index: int)
     }
     index := -1;
     return;
-    // return -1;
 }
 
 method Main ()

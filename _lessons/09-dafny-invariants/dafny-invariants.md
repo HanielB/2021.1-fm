@@ -3,7 +3,7 @@ layout: page
 title: Dafny and invariants
 ---
 
-# Dafny Introduction
+# Dafny and invariants
 {: .no_toc .mb-2 }
 
 - TOC

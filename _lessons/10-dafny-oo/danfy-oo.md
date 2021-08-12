@@ -16,6 +16,11 @@ title: Dafny and object orientation
 - [Collection types](https://dafny-lang.github.io/dafny/DafnyRef/DafnyRef#sec-collection-types) chapter from Dafny's refernce manual
 - [Class types](https://dafny-lang.github.io/dafny/DafnyRef/DafnyRef#sec-class-types) chapter from Dafny's refernce manual
 
+### Recommended readings
+
+- Lecture notes by Cesare Tinelli:
+  - [Reasoning about programs with objects in Dafny]({{ site.baseurl }}{% link _lessons/10-dafny-oo/cesare-oo.pdf %})
+
 ## Collection types
 
 Dafny offers several built-in collection types. Of particular interest for us are `sets` and `sequences`. A few examples of their usage are below.
@@ -163,7 +168,7 @@ function update(s: seq<int>, i: int, v: int): seq<int>
 
 ## Class types
 
-From [Lein13]({{ site.baseurl }}{% link _lessons/10-dafny-oo/Lein13.pdf %}) and [Herb11]({{ site.baseurl }}{% link _lessons/10-dafny-oo/Herb11.pdf %}):
+From [Lein13]({{ site.baseurl }}{% link _lessons/10-dafny-oo/Lein13.pdf %}):
 
 > Classes offer a way to dynamically allocate mutable data
 structures. References (that is, pointers) to components of these data

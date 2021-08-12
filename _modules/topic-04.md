@@ -24,3 +24,7 @@ title: Topic 04 - Specifying and verifying programs with Dafny
 10 Aug
 : [**More on arrays and invariants**]({{ site.baseurl }}{% link _lessons/09-dafny-invariants/dafny-invariants.md %})
   : [Lecture](https://youtu.be/JPOR5n4GH2M)
+
+13 Aug
+: [**OO programming and verification in Dafny**]({{ site.baseurl }}{% link _lessons/10-dafny-oo/danfy-oo.md %})
+  : [Lecture](https://youtu.be/3IFWLOieE5w)

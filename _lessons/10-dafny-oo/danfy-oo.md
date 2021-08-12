@@ -179,3 +179,7 @@ method specifications. The program updates both sets of variables, maintaining
 the validity condition, but the compiler emits only the physical variables into
 the executable code. The Dafny language embraces the idea of ghost constructs,
 not just for variables but also for other declarations and statements.
+
+We will now see how to specify classes as abstract data types to separate
+observable behavior from internal implementation. Moreover we will see the use
+of dynamic frames in Dafny to specify and verify programs using objects.

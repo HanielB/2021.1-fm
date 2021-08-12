@@ -1,9 +1,9 @@
 ---
 layout: page
-title: Dafny and invariants
+title: Dafny invariants and arrays
 ---
 
-# Dafny and invariants
+# Dafny invariants and arrays
 {: .no_toc .mb-2 }
 
 - TOC

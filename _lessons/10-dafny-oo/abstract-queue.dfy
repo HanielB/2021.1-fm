@@ -95,7 +95,7 @@ method Main ()
   q.enqueue(2);                assert q.Content == [1,2,3,2];
   q.enqueue(4);                assert q.Content == [1,2,3,2,4];
 
-  var f := q.front();          assert f == 1 && q.Content == [1,2,3,2,4];
+  var f := q.front();          assert f == 1 && q.a[..q.n] == [1,2,3,2,4];
   print "Front of the list is ", f, "\n";
   f := q.dequeue();            assert           q.Content == [2,3,2,4];
   q.enqueue(5);                assert           q.Content == [2,3,2,4,5];

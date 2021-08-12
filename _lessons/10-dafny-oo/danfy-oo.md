@@ -16,10 +16,10 @@ title: Dafny and object orientation
 - [Collection types](https://dafny-lang.github.io/dafny/DafnyRef/DafnyRef#sec-collection-types) chapter from Dafny's refernce manual
 - [Class types](https://dafny-lang.github.io/dafny/DafnyRef/DafnyRef#sec-class-types) chapter from Dafny's refernce manual
 
-### Recommended readings
+<!-- ### Recommended readings -->
 
-- Lecture notes by Cesare Tinelli:
-  - [Reasoning about programs with objects in Dafny]({{ site.baseurl }}{% link _lessons/10-dafny-oo/cesare-oo.pdf %})
+<!-- - Lecture notes by Cesare Tinelli: -->
+<!--   - [Reasoning about programs with objects in Dafny]({{ site.baseurl }}{% link _lessons/10-dafny-oo/cesare-oo.pdf %}) -->
 
 ## Collection types
 

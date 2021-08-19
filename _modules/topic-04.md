@@ -28,3 +28,10 @@ title: Topic 04 - Specifying and verifying programs with Dafny
 12 Aug
 : [**OO programming and verification in Dafny**]({{ site.baseurl }}{% link _lessons/10-dafny-oo/danfy-oo.md %})
   : [Lecture](https://youtu.be/3IFWLOieE5w)
+
+17 Aug
+: Laboratory: OO in Dafny
+
+19 Aug
+: [**More on OO in Dafny**]({{ site.baseurl }}{% link _lessons/10-dafny-oo/danfy-oo.md %})
+  : [Lecture](https://youtu.be/gQZZVyIpYQc)

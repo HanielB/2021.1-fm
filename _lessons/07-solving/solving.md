@@ -100,3 +100,14 @@ formula that is fed into a SAT solver and whose satisfying assignment can be
 mapped back into the Alloy instance being searched?
 
 
+
+
+Now consider adding this predicate
+
+```
+pred hasSubNest {
+  some subNest : Pigeon -> Hole | some subNest and #subNest < #nest and subNest in nest
+}
+
+run {hasSubNest} for exactly 3 Hole, exactly 3 Pigeon
+```

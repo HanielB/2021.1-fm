@@ -35,3 +35,13 @@ title: Topic 04 - Specifying and verifying programs with Dafny
 19 Aug
 : [**More on OO in Dafny**]({{ site.baseurl }}{% link _lessons/10-dafny-oo/danfy-oo.md %})
   : [Lecture](https://youtu.be/gQZZVyIpYQc)
+
+24 Aug
+: Q&A
+  : [Lecture](https://youtu.be/l-PJ2ET6OQo)
+
+26 Aug
+: Exam
+
+31 Aug
+: Make-up exam
